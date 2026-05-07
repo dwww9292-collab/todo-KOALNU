@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KOALNU TODO — 할일 관리</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">KOALNU<span class="logo-sub">TODO</span></a>
+      <div class="nav-actions">
+        <span id="syncStatus" class="sync-status">●</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container todo-app">
+    <h1 class="app-title">오늘 할 일</h1>
+    <p class="app-subtitle">Firebase로 실시간 동기화됩니다</p>
+
+    <form id="todoForm" class="todo-form">
+      <input
+        type="text"
+        id="todoInput"
+        placeholder="할 일을 입력하고 Enter를 누르세요"
+        autocomplete="off"
+        required
+      />
+      <button type="submit" class="btn btn-primary">추가</button>
+    </form>
+
+    <div class="todo-toolbar">
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-filter="all">전체 <span class="count" id="countAll">0</span></button>
+        <button class="filter-btn" data-filter="active">미완료 <span class="count" id="countActive">0</span></button>
+        <button class="filter-btn" data-filter="done">완료 <span class="count" id="countDone">0</span></button>
+      </div>
+      <button class="text-btn" id="clearDoneBtn">완료된 항목 삭제</button>
+    </div>
+
+    <ul id="todoList" class="todo-list">
+      <li class="todo-empty">불러오는 중...</li>
+    </ul>
+  </main>
+
+  <footer class="footer">
+    <p>Firebase Realtime Database · &copy; 2026 KOALNU TODO</p>
+  </footer>
+
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module" src="js/todo.js"></script>
+</body>
+</html>
