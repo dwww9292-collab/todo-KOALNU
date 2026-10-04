@@ -9,3 +9,6 @@ Thumbs.db
 .env.*.local
 dist/
 build/
+
+# 전달용 패키지 아티팩트 (iwon-kit/ 에서 재생성 가능)
+iwon-kit.zip

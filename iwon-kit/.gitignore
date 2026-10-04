@@ -1,0 +1,56 @@
+# ===== 비밀값 =====
+# ASP 사이트는 DB 접속정보가 .asp 안에 하드코딩된 경우가 많다.
+# 해당 파일을 찾아 아래에 직접 추가할 것. (START_HERE 3단계에서 확인)
+# 예: dbconn.asp
+# 예: /inc/db_config.asp
+
+*.env
+.env
+.env.*
+web.config.local
+*.pfx
+*.key
+
+# ===== 업로드/생성물 =====
+# 사용자 업로드 파일은 보통 버전관리 대상이 아니다.
+# 실제 경로 확인 후 조정할 것.
+/upload/
+/uploads/
+/data/upload/
+/temp/
+/tmp/
+
+# ===== 로그 =====
+*.log
+/logs/
+
+# ===== 백업·임시 파일 =====
+*.bak
+*.old
+*.orig
+*~
+*.tmp
+*_backup.*
+*_bak.*
+# FTP 클라이언트·편집기가 만드는 것
+*.asp.bak
+.ftpconfig
+sftp-config.json
+
+# ===== OS / 편집기 =====
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
+*.sublime-*
+
+# ===== 디자인 참조 폴더가 이 안에 복사될 경우 =====
+# C:\soft_bank-main 은 별도 폴더이므로 보통 해당 없음.
+# 안으로 복사해 왔다면 아래 주석을 해제.
+# /soft_bank-main/
+# /_design/
+
+# ===== 의존성 =====
+node_modules/
